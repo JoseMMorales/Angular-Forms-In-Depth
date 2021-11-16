@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -8,14 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-
-  constructor() {
-
-
+   // Default Object to add default value o loginForm 
+   val = {
+    email: "hello@gmail.com",
+    password: "23456"
   }
 
-  ngOnInit() {
+  constructor() { }
 
+  ngOnInit(): void {
+  }
+
+  login(loginForm: NgForm, submit: any) {
+    console.log(loginForm.value, loginForm.valid)
+    console.log(submit);
+
+    console.log("val", this.val); //Printing val Object
+  }
+
+  onEmailChange(event: any) {
+    console.log(event);
   }
 
 }
