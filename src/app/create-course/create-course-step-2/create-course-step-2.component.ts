@@ -16,7 +16,9 @@ export class CreateCourseStep2Component implements OnInit {
       Validators.min(1),
       Validators.maxLength(9999),
       Validators.pattern("[0-9]+")
-    ]]
+    ]],
+    promoStartAt: [null], //No validators as it is going to be optional
+    promoEndAt: [null] //No validators as it is going to be optional
   });
 
   constructor(private fb: FormBuilder) {}
@@ -31,7 +33,7 @@ export class CreateCourseStep2Component implements OnInit {
           priceControl.disable({emitEvent: false});
 
         } else if (val.courseType == 'premium' && priceControl.disable) {
-          priceControl.enable({emitEvent: false});
+          priceControl.enable({emitEvent: false}); //emitEvent to avoid loop when throw the disabe/unable
         }
       })
     }
