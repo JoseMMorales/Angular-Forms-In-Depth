@@ -42,8 +42,8 @@ import {CreateCourseStep1Component} from './create-course/create-course-step-1/c
 import {FileUploadComponent} from './file-upload/file-upload.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {LoginReactiveComponent} from './login-reactive/login-reactive.component';
-import { OnlyOneErrorPipe } from './Pipes/only-one-error-pipe';
-import { PasswordStrengthDirective } from './Directives/password-strength.directives';
+import { OnlyOneErrorPipe } from './pipes/only-one-error-pipe';
+import { PasswordStrengthDirective } from './directives/password-strength.directives';
 
 @NgModule({
     declarations: [

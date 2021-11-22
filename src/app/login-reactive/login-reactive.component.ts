@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { createPasswordStrengthValidator } from '../Validators/password-strength.validator';
+import { createPasswordStrengthValidator } from '../validators/password-strength.validator';
 
 @Component({
   selector: 'app-login-reactive',

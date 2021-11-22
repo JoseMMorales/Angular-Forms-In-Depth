@@ -1,6 +1,6 @@
 import { Directive } from "@angular/core";
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validators } from "@angular/forms";
-import { createPasswordStrengthValidator } from "../Validators/password-strength.validator";
+import { createPasswordStrengthValidator } from "../validators/password-strength.validator";
 
 @Directive({
     selector: "[passwordStrength]",
