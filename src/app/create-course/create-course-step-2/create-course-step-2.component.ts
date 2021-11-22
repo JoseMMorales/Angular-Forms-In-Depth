@@ -18,11 +18,11 @@ export class CreateCourseStep2Component implements OnInit {
       Validators.maxLength(9999),
       Validators.pattern("[0-9]+")
     ]],
+    thumbnail: [null],
     promoStartAt: [null], //No validators as it is going to be optional
     promoEndAt: [null] //No validators as it is going to be optional
   }, {
-    validators: [createPromoRangeValidator()],
-    updateOn: 'blur'
+    validators: [createPromoRangeValidator()]
   });
 
   constructor(private fb: FormBuilder) {}
