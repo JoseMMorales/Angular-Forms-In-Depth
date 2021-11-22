@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { createPromoRangeValidator } from '../../validators/date-range.validator';
 
 
 @Component({
@@ -19,6 +20,9 @@ export class CreateCourseStep2Component implements OnInit {
     ]],
     promoStartAt: [null], //No validators as it is going to be optional
     promoEndAt: [null] //No validators as it is going to be optional
+  }, {
+    validators: [createPromoRangeValidator()],
+    updateOn: 'blur'
   });
 
   constructor(private fb: FormBuilder) {}
